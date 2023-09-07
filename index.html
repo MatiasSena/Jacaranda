@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+    <title>Jacaranda</title>
+</head>
+<body> 
+    <header>
+      <div class="navbar">
+       <div class="logo"><a href="LOGO">JACARANDÁ </a></div>
+       <ul class="links">
+        <li><a href="INICIO">Inicio</a></li>
+        <li><a href="PRODUCTOS">Productos</a></li>
+        <li><a href="ABOUT">Sobre nosotros</a></li>
+        <li><a href="CONTACTOS">Contacto</a></li>
+       </ul>
+       <a href="#" class="usuario_btn">
+        <i class="fa-solid fa-user"></i>
+       </a>
+       <a href="#" class="carrito_btn">
+
+       </a>
+       <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+       </div>
+      </div>
+
+      <div class="menu_desplegable">
+        <li><a href="INICIO">Inicio</a></li>
+        <li><a href="PRODUCTOS">Productos</a></li>
+        <li><a href="NOSOTROS">Sobre nosotros</a></li>
+        <li><a href="CONTACTOS">Contacto</a></li>
+        <li><a href="#" class="usuario_btn">Iniciar Sesión</a></li>
+      </div>
+    </header>
+    <main>
+      <section id="INICIO">
+        <h1>¡BIENVENIDO!</h1>
+        <P>Acá vas a encontrar todo lo que buscás <br /> 
+        </P> 
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const toggleBtnIcon = document.querySelector('.toggle_btn i');
+      const menuDesplegable = document.querySelector('.menu_desplegable')
+
+      toggleBtn.onclick = function() {
+        menuDesplegable.classList.toggle('open')
+        const isOpen = menuDesplegable.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }
+    </script>
+</body>
+</html>

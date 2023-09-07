@@ -1,0 +1,159 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'Open sanz', sans-serif;
+}
+body{
+  height: 100vh;
+  background-color: #ffffff;
+  background-image: url('https://i.pinimg.com/564x/92/e6/eb/92e6ebfded6a0780c24e5a9a133e2fc2.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(1.5px);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #dfcae1;
+  font-size: 1rem;
+}
+
+a:hover{
+  color: #c0a0c3
+}
+
+header{
+  background-color: #8F7193;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar{
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.navbar .links{
+  display: flex;
+  gap: 2rem;
+
+}
+
+.navbar .toggle_btn{
+  color: #dfcae1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display:none;
+}
+
+.usuario_btn{
+  background-color: #a788ab;
+  color: #dfcae1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 2.0 ease;
+}
+
+.usuario_btn:hover{
+  background-color: #c0a0c3;
+  scale: 1.05;
+  color:#e5dde6;
+}
+
+.usuario_btn:active{
+  scale: 0.95;
+}
+
+/*MENU DESPLEGABLE*/
+
+.menu_desplegable{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: #d1b8d44f;
+  backdrop-filter: blur(2%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu_desplegable.open{
+  height: 240px;
+  
+}
+
+.menu_desplegable li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_desplegable .usuario_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* INICIO */
+
+section#INICIO{
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #000
+}
+
+#INICIO h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+/*DISEÑO RESPONSIVE*/
+
+@media(max-width: 992px){
+  .navbar .links,
+  .navbar .usuario_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .menu_desplegable{
+    display: block;
+  }
+}
+
+@media(max-width: 576px){
+  .menu_desplegable{
+    left: 2rem;
+    width: unset;    
+  }
+}
